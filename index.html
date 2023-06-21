@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Piedra-Papel-Tijera</title>
+</head>
+<body>
+    <header>
+        <img src="./img/logo.png" class="img" alt="logo">
+        <div class="titulo">
+            <h1>Piedra, Papel o Tijera</h1>
+            <P>Proyecto realizado con HTML, CSS y JavaScript</P>
+        </div>
+    </header>
+    <main>
+        <p class="instrucciones" id="instrucciones">
+            El primero en llegar a 5 puntos gana!
+        </p>
+        <div class="marcador">
+            <p class="nombre nombre-jugador" id="jugador">Jugador</p>
+            <p class="nombre nombre-computadora" id="computadora">Computadora</p>
+            <p class="puntos">
+                <span id="puntos-jugador">0</span>
+                <span >-</span>
+                <span id="puntos-computadora">0</span>
+            </p>
+        </div>
+            <div class="elegi-tu-opcion" id="elegi-tu-opcion">
+                <h2>Elegi la opcion de tu proximo turno</h2>
+                <div class="opciones">
+                    <button class="btn opcion" id="piedra"><img src="./img/0.png" alt="piedra"></button>
+                    <button class="btn opcion" id="papel"><img src="./img/1.png" alt="papel"></button>
+                    <button class="btn opcion" id="tijera"><img src="./img/2.png" alt="tijera"></button>
+                </div>
+            </div>
+            <div class="mensaje disabled" id="mensaje">
+                <div class="opcion-tomada">
+                    <img class="uso-jugador" src="./img/0.png" alt="piedra" id="uso-jugador">
+                    <img class="uso-computadora" src="./img/1.png" alt="papel" id="uso-computadora">
+                </div>
+                <span class="eleccion" id="eleccion-jugador">Usaste</span>
+                <br>
+                <span class="eleccion" id="eleccion-computadora">La computadora uso</span>
+                <br>
+
+            </div>
+            <p id="gana-punto" class="disabled"> Ganaste un punto! </p>
+            <button class="btn reinicio disabled" id="reinicio"> Reiniciar Juego</button>
+    </main>
+</body>
+<script src="./js/index.js"></script>
+</html>

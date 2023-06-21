@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+:root{
+    --clr-primary-o: #1d212b;
+    --clr-primary: #1f2638;
+    --clr-primary-c: #404b69;
+    --clr-secondary: #ebf4f7;
+    --clr-secondary-c: #c5d9df;
+    --clr-neutro: #5285ea;
+    --clr-special: #F73859;
+    --clr-win:#7aea52;
+    --clr-empate:#e5b94c;
+    --clr-filter: #bcb6fa;
+
+}
+
+body{
+    background-color: var(--clr-primary);
+    color: var(--clr-secondary);
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: var(--clr-primary-c);
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+header h1{
+    font-weight: 600;
+    text-align: center;
+}
+
+header img{
+    position: absolute;
+    max-width: 6rem;
+    border-radius: 100vmax;
+    padding: 0.5rem;
+    left: 5%;
+    filter: invert(97%) sepia(12%) saturate(356%) hue-rotate(166deg) brightness(99%) contrast(95%);
+}
+
+@media  screen and (max-width: 810px) {
+    header img{
+        display: none;
+    }
+}
+    
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.instrucciones{
+    margin-bottom: 2rem;
+}
+
+.marcador{
+    background-color: var(--clr-secondary);
+    color: var(--clr-primary-c);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.marcador .puntos{
+    font-size: 1.5rem;
+}
+
+.marcador .nombre{
+    position: absolute;
+    color: var(--clr-secondary);
+    background-color: var(--clr-primary-c);
+    font-weight: 600;
+    line-height: 1;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid var(--clr-secondary);
+}
+
+.marcador .nombre-jugador {
+    right: 85%;
+}
+
+.marcador .nombre-computadora {
+    left: 85%;
+}
+
+.elegi-tu-opcion{
+    margin-bottom: 2rem;;
+}
+
+.elegi-tu-opcion h2{
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.opciones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn{
+    border: none;
+    background-color: var(--clr-primary-c);
+    color: var(--clr-secondary);
+    width: 4.4rem;
+    height: 4.4rem;
+    padding: 0.3rem;
+    border-radius: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 4px solid var(--clr-primary-o);
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+.btn img{
+    max-width: 70%;
+    max-height: 70%;
+    filter: invert(97%) sepia(12%) saturate(356%) hue-rotate(166deg) brightness(99%) contrast(95%);
+}
+
+.btn:active{
+    background-color: var(--clr-neutro);
+    border-bottom: var(--clr-neutro) 2px solid;
+}
+
+.btn:active img{
+    filter: invert(95%) sepia(6%) saturate(756%) hue-rotate(160deg) brightness(92%) contrast(90%);
+}
+
+.mensaje{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 160px;
+    height: 120px;
+}
+
+.opcion-tomada{
+    position: absolute;
+    display: flex;
+    right: -70%;
+    top: -6%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 80px;
+    max-height: 100px;
+}
+
+.perdedor{
+    color: var(--clr-special) !important; 
+}
+
+.ganador{
+    color: var(--clr-win) !important; 
+}
+
+.empate{
+    color: var(--clr-empate) !important;
+}
+
+.mensaje img{
+    max-width: 70%;
+    max-height: 50%;
+    background-color: var(--clr-filter);
+    padding: 0.5rem;
+    border-radius: 0.6rem;
+    filter: invert(93%) sepia(16%) saturate(98%) hue-rotate(163deg) brightness(102%) contrast(94%);
+}
+
+.mensaje p{
+    background-color: red;
+}
+
+.uso-jugador{
+    left: 110%;
+    top: -10%;
+}
+
+.uso-computadora{
+    left: 110%;
+}
+
+/*sirve por si necesitamos ocultar algo a traves de javascript*/
+.disabled {
+    display: none;
+}
